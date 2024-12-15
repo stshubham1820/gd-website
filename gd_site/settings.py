@@ -14,15 +14,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = [
-    '*'
+    os.environ.get('HOST_1'),
+    os.environ.get('HOST_2'),
+    os.environ.get('HOST_3'),
+    os.environ.get('HOST_4')
 ]
-
-# ALLOWED_HOSTS = [
-#     os.environ.get('HOST_1'),
-#     os.environ.get('HOST_2'),
-#     os.environ.get('HOST_3'),
-#     os.environ.get('HOST_4')
-# ]
 
 # Application definition
 
