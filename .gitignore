@@ -1,6 +1,9 @@
+#This contains the file that we don't want to push in git
+
 .env
 .venv
 venv
 docker-compose.yml
 Dockerfile
 env
+staticfiles
