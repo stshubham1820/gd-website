@@ -46,7 +46,11 @@
  *
  * =================================================================== */
 
-
+ /* Black : #130e0c
+ White : #ffffff
+ light brown baige : #f1eeeb
+ dark baige : #d6cfc8 */
+ 
 
 /* ===================================================================
  * # base style overrides 
@@ -54,6 +58,17 @@
  * ------------------------------------------------------------------- */
 html {
   font-size: 10px;
+}
+
+@font-face {
+  font-family: 'CustomFont'; /* Name of the font */
+  src: url('./FontsFree-Net-Dream-Avenue.ttf') format('truetype'); /* Relative path to the font */
+  font-weight: normal;
+  font-style: normal;
+}
+
+h3{
+  font-family: 'CustomFont';
 }
 
 @media screen and (max-width:400px) {
@@ -69,7 +84,7 @@ body {
 }
 
 body {
-  background: #ffffff;
+  background: #d6cfc8;
   font-family: "Gothic A1", sans-serif;
   font-size: 1.8rem;
   font-style: normal;
@@ -86,7 +101,7 @@ body {
  * ## links 
  * ------------------------------------------------------------------- */
 a {
-  color: #8dc63f;
+  color: #f1eeeb;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -410,7 +425,7 @@ ul.disc li::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #8dc63f;
+  background: #f1eeeb;
   position: absolute;
   left: -16px;
   top: 11px;
@@ -419,7 +434,7 @@ ul.disc li::before {
 
 dt {
   margin: 0;
-  color: #8dc63f;
+  color: #f1eeeb;
 }
 
 dd {
@@ -542,7 +557,8 @@ form,
   left: 0;
   right: 0;
   bottom: 0;
-  background: #1d1d1d;
+  background: #d6cfc8; 
+  /* background: #1d1d1d; */
   z-index: 500;
   height: 100vh;
   width: 100%;
@@ -568,7 +584,7 @@ form,
 
 #loader > div {
   content: "";
-  background: #ffffff;
+  background: #130e0c;
   width: 6px;
   height: 6px;
   position: absolute;
@@ -820,7 +836,7 @@ textarea:focus,
 select:focus {
   color: #000000;
   box-shadow: 0 0 5px rgba(141, 198, 63, 0.8);
-  border: 1px solid #8dc63f;
+  border: 1px solid #f1eeeb;
 }
 
 label,
@@ -913,7 +929,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #8dc63f;
+  -webkit-text-fill-color: #f1eeeb;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -974,8 +990,8 @@ button.btn--primary,
 input[type="submit"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
-  background: #8dc63f;
-  border-color: #8dc63f;
+  background: #f1eeeb;
+  border-color: #f1eeeb;
   color: #ffffff;
 }
 
@@ -1196,7 +1212,7 @@ input::-moz-focus-inner {
 }
 
 .stats-tabs li a:hover {
-  color: #8dc63f;
+  color: #f1eeeb;
 }
 
 .stats-tabs li a em {
@@ -1497,7 +1513,7 @@ input::-moz-focus-inner {
 }
 
 .header-email svg {
-  fill: #72a130;
+  fill: #f1eeeb;
   height: 1.5rem;
   width: 1.5rem;
   margin-right: .4rem;
@@ -1506,7 +1522,7 @@ input::-moz-focus-inner {
 }
 
 .header-email a {
-  color: rgba(255, 255, 255, 0.4);
+  color: #f1eeeb  ;
   display: inline-block;
   position: relative;
 }
@@ -1516,7 +1532,7 @@ input::-moz-focus-inner {
   display: block;
   width: 0;
   height: 1px;
-  background-color: #72a130;
+  background-color: #f1eeeb;
   transition: width 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   position: absolute;
   left: 0;
@@ -1817,7 +1833,7 @@ input::-moz-focus-inner {
   line-height: 2rem;
   text-transform: uppercase;
   letter-spacing: .3em;
-  color: #8dc63f;
+  color: #f1eeeb;
   padding-left: .6rem;
   margin-top: 0;
   margin-bottom: .8rem;
@@ -1986,7 +2002,7 @@ input::-moz-focus-inner {
 }
 
 .modal svg {
-  fill: #8dc63f;
+  fill: #f1eeeb;
   width: 4.8rem;
   height: 4.8rem;
 }
@@ -2519,7 +2535,7 @@ html.no-csstransitions .intro-content__bottom {
 .s-info {
   padding-top: 16rem;
   padding-bottom: 8rem;
-  background-color: #ffffff;
+  background-color: #d6cfc8;
   position: relative;
 }
 
@@ -2536,27 +2552,26 @@ html.no-csstransitions .intro-content__bottom {
   display: block;
   height: inherit;
   width: 1px;
-  background-color: #8dc63f;
+  background-color: #f1eeeb;
   position: absolute;
   left: 50%;
   top: 0;
 }
 
-.s-info::before {
+/* .s-info::before {
   display: block;
   content: "";
   width: 55%;
   height: 65%;
-  background-color: #ffffff;
+  background-color: #d6cfc8;
   opacity: .5;
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
-  background-image: url(../images/bg-info.jpg);
   position: absolute;
   right: 0;
   bottom: 0;
-}
+} */
 
 .s-info h1,
 .s-info h4 {
@@ -2576,7 +2591,7 @@ html.no-csstransitions .intro-content__bottom {
   content: "";
   width: 8rem;
   height: 1px;
-  background-color: #8dc63f;
+  background-color: #f1eeeb;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -2666,7 +2681,7 @@ html.no-csstransitions .intro-content__bottom {
   font-weight: 700;
   font-size: 3.6rem;
   line-height: 1;
-  color: #8dc63f;
+  color: #f1eeeb;
 }
 
 /* link list
@@ -2687,7 +2702,7 @@ html.no-csstransitions .intro-content__bottom {
 .link-list a:hover,
 .link-list a:focus,
 .link-list a:active {
-  color: #8dc63f;
+  color: #f1eeeb;
 }
 
 /* tab contact bottom
@@ -2699,13 +2714,13 @@ html.no-csstransitions .intro-content__bottom {
   font-weight: 700;
   line-height: 1;
   margin: 5.6rem 0 .8rem;
-  color: #8dc63f;
+  color: #f1eeeb;
   border-bottom: 1px solid #efefef;
 }
 
 .contact-email:hover,
 .contact-email:focus {
-  color: #8dc63f;
+  color: #f1eeeb;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
@@ -2722,7 +2737,7 @@ html.no-csstransitions .intro-content__bottom {
 
 .contact-number a:hover,
 .contact-number a:focus {
-  color: #8dc63f;
+  color: #f1eeeb;
 }
 
 .contact-number a::after {
