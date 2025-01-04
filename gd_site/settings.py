@@ -8,16 +8,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-r@br&(g@o)$^sr4rhcniz=r8&!vz7b$1pe1fax+f$k4pq%&(27'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    os.environ.get('HOST_1'),
-    os.environ.get('HOST_2'),
-    os.environ.get('HOST_3'),
-    os.environ.get('HOST_4')
+    '*'
 ]
 
 # Application definition
@@ -104,36 +101,51 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-if os.environ.get('PRODUCTION'):
-    # Production settings
-    STATIC_URL = '/static/'
+# Development settings
+STATIC_URL = '/static/'
 
-    # Media files (uploaded by users) settings
-    MEDIA_URL = '/media/'
+# Media files settings
+MEDIA_URL = '/media/'
 
-    # Directory for static files (optional: for development)
-    STATICFILES_DIRS = [
+STATICFILES_DIRS = [
         BASE_DIR / "static",  # Additional static files can be stored here in development
     ]
+# Collect static files here when running `collectstatic`
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-    # Location for collected static files during production (for `collectstatic` command)
-    STATIC_ROOT = BASE_DIR / "staticfiles"
+# Media files location on the server (development or local testing)
+MEDIA_ROOT = BASE_DIR / 'media'
 
-    # Media files location
-    MEDIA_ROOT = BASE_DIR / "media"
+# if os.environ.get('PRODUCTION'):
+#     # Production settings
+#     STATIC_URL = '/static/'
 
-else:
-    # Development settings
-    STATIC_URL = '/static/'
+#     # Media files (uploaded by users) settings
+#     MEDIA_URL = '/media/'
 
-    # Media files settings
-    MEDIA_URL = '/media/'
+#     # Directory for static files (optional: for development)
+#     STATICFILES_DIRS = [
+#         BASE_DIR / "static",  # Additional static files can be stored here in development
+#     ]
 
-    # Collect static files here when running `collectstatic`
-    STATIC_ROOT = BASE_DIR / 'staticfiles'
+#     # Location for collected static files during production (for `collectstatic` command)
+#     STATIC_ROOT = BASE_DIR / "staticfiles"
 
-    # Media files location on the server (development or local testing)
-    MEDIA_ROOT = BASE_DIR / 'media'
+#     # Media files location
+#     MEDIA_ROOT = BASE_DIR / "media"
+
+# else:
+#     # Development settings
+#     STATIC_URL = '/static/'
+
+#     # Media files settings
+#     MEDIA_URL = '/media/'
+
+#     # Collect static files here when running `collectstatic`
+#     STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+#     # Media files location on the server (development or local testing)
+#     MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

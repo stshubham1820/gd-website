@@ -27,9 +27,9 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" sizes="180x180" href="{% static 'images/gd_logo_2.png' %}" type="image/png">
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> -->
     <link rel="manifest" href="site.webmanifest">
 
 </head>
@@ -52,9 +52,7 @@
 
         <div class="header-logo">
             <a class="site-logo" href="/"> 
-                <h3 style="color : #d6cfc8 ;">
-                    getdressed
-                </h3>
+                <img src="{% static 'images/gd_logo_2.png' %}" alt="Company Logo" class="logo">
             </a>
         </div>
 
@@ -109,10 +107,10 @@
 
                     <div class="intro-content__counter-wrap">
                         <h4 style="color: #d6cfc8;">Launching in</h4>
-            
-                        <div class="counter">
+                            <span style="color: #f1eeeb; font-size: 10px;">when you start loving us</span>
+                        <!-- <div class="counter">
                             <div class="counter__time days">
-                                365
+                                30
                                 <span>D</span>
                             </div>
                             <div class="counter__time hours">
@@ -127,7 +125,7 @@
                                 57
                                 <span>S</span>
                             </div>
-                        </div>  <!-- end counter -->
+                        </div>  end counter -->
                     </div> <!-- end intro-content__counter-wrap -->
 
                     <div class="intro-content__notify">
@@ -218,26 +216,32 @@
 
                         <div class="row tab-content__item-header">
                             <div class="column">
-                                <h1>Hello. We are Imminent.</h1>
+                                <h1>Finally, We got you !</h1>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="column">
                                 <p class="lead">
-                                Quidem molestiae natus ipsa ut nihil molestiae numquam tenetur. Ipsum quia 
-                                sit vitae ipsam et temporibus est. Consequatur recusandae aut aut. Aut esse 
-                                sed sint. Sit ipsa velit possimus est. Atque doloribus dicta sit beatae 
-                                necessitatibus.
+                                    We’ve got a small story that could easily be wrapped up in just 2 parts, each around 2.5 hours. But with your love and support, we’re ready to stretch it into a 4-5 part epic! Don’t worry, it won’t be as long as Harry Potter, but it won’t be a quick Baahubali-style flick either. Instead of making you read all the details, we’d rather show you the movie—because, trust us, that’s what’s more profitable. And you know who will love that? Our founder—he’s all about the money!
                                 </p>
 
                                 <p>
-                                Tempora debitis perspiciatis eum. Repudiandae et aperiam quos exercitationem 
-                                enim voluptatem quam sequi temporibus. Ratione quis nihil voluptatem placeat 
-                                nemo. Quibusdam delectus magni quas et architecto et repellat a nam.
-                                Quasi et voluptates libero sed vel quos in nisi. Error et quis. Impedit autem 
-                                porro facilis. Aut voluptate asperiores nostrum eveniet magnam et consequatur 
-                                ab accusamus. Consequatur quod ut omnis eum dicta mollitia dignissimos.
+                                    We are a team of 5 members and even though we don't know who they are, 
+                                    we just know each other through family relations. 
+                                    We are a really hard working team. We were desiging this website 
+                                    from 2024 and able to complete it in 2025.
+
+                                    <br><br>
+
+                                    We’re starting a journey to bring that missing spark to your life. 
+                                    While we’re keeping some things under wraps for now, we’re leaving 
+                                    the door open for you to make your predictions. 
+                                    We’re in the pre-launch phase, and this brand, designed by 
+                                    Go***toz from Bengaluru, with strategies crafted in Mumbai, 
+                                    is being brought to life by the hardworking folks of Bhilai. 
+                                    Think of it like a mango tree—starting small but destined to 
+                                    grow into something truly sweet.
                                 </p>
 
                                 <!-- <div class="row">
@@ -291,8 +295,12 @@
                                 <div class="services-list__item-content">
                                     <h4 class="item-title">Happiness Unlimited</h4>
                                     <p>
-                                        Ever felt the kind of joy that makes you want to twirl, smile at strangers, and dance in your living room? <br> That’s the vibe we’re bringing.
-                                        A happiness so pure, it should come with a disclaimer: <br> May cause random bursts of self-love for you <br> 
+                                        Ever felt the kind of joy that makes you want to twirl, 
+                                        smile at strangers, and dance in your living room? <br> 
+                                        That’s the vibe we’re bringing.
+                                        A happiness so pure, it should come with a disclaimer: <br> 
+                                        <br>
+                                        May cause random bursts of self-love for you <br> 
                                         <a href="https://youtu.be/IBvg3WeqP1U?t=132">lets-listen</a>.
                                     </p>
                                 </div>
@@ -302,8 +310,10 @@
                                 <div class="services-list__item-content">
                                     <h4 class="item-title">Unforgettable Memories</h4>
                                     <p>
-                                        Imagine looking back on your favorite moments and realizing you felt your absolute best every single time.<br> 
+                                        Imagine looking back on your favorite moments and realizing 
+                                        you felt your absolute best every single time.<br> 
                                         That’s the kind of story we want to help you write—one unforgettable chapter at a time.<br>
+                                        <br>
                                         Side note: You might find yourself accidentally becoming the star of every throwback photo.
                                     </p>
                                 </div>
@@ -311,27 +321,55 @@
                 
                             <div class="column services-list__item">
                                 <div class="services-list__item-content">
-                                    <h4 class="item-title">Web Design</h4>
+                                    <h4 class="item-title">Effortless Charm</h4>
                                     <p>
-                                    Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
-                                    a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
-                                    asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                                        Walking into a room and stealing the spotlight,<br>
+                                        step by step, with all the confidence you never knew you had!<br>
+                                        No more second-guessing, no more doubts—just pure charm,<br>
+                                        and that’s what we will help you to discover!<br>
+                                        <br>
+                                        We don't know you are ready or not but we are..<br>
+                                        <br><br>
+                                        We're about to make kajal the most valuable thing 
+                                        in your bag —because let's face it,<br> 
+                                        you're probably using it more than your phone!
                                     </p>
+                                    <!-- <p>
+                                        Ever walked into a room and felt every eye on you?<br>
+                                        Maybe once, maybe twice... but that’s rare,<br>
+                                        isn’t it well,from now get used to it.<br> 
+                                        Once you’re with GetDressed—uff! <br>
+                                        You’ll be the showstopper. Don't say we didn’t warn you
+                                        —your new fan club is waiting to take selfies with you!<br>
+
+                                        We provide free kajal for your safety—so stay assured no harm to your charm.
+                                    </p> -->
                                 </div>
                             </div>
                 
                             <div class="column services-list__item">
                                 <div class="services-list__item-content">
-                                    <h4 class="item-title">Product Strategy</h4>
+                                    <h4 class="item-title">Discovering You</h4>
                                     <p>
-                                    Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
-                                    a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
-                                    asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                                        Ever wonder how gold discovered its shine? <br>
+                                        By its own— No someone had to spot it first<br>
+                                        We all think we know ourselves, but what if <br>
+                                        the real version of us is waiting to be revealed?<br>
+                                        We’re here to show you the magic you’ve been missing—<br>
+                                        the version that’s been there all along,<br>
+                                        just waiting for the world to see it.<br>
+                                        <br>
+                                        And when you do, don’t be surprised if you catch <br>
+                                        a glimpse of yourself in the mirror and think, <br>
+                                        “Wait, who is this fabulous person?” <br>
+                                        It’s you—finally discovered.<br>
+                                         
+                                        <!-- Side note : Randomly It can happen you will see yourself in the middle of the night and then sleep ooh this might not me. -->
                                     </p>
                                 </div>
                             </div>
                 
-                            <div class="column services-list__item">
+                            <!-- <div class="column services-list__item">
                                 <div class="services-list__item-content">
                                     <h4 class="item-title">UI/UX Design</h4>
                                     <p>
@@ -340,15 +378,23 @@
                                     asperiores est commodi amet quia architecto. Dolores necessitatibus et.
                                     </p>
                                 </div>
-                            </div>
+                            </div> -->
                 
-                            <div class="column services-list__item">
+                            <!-- <div class="column services-list__item">
                                 <div class="services-list__item-content">
                                     <h4 class="item-title">Mobile Design</h4>
                                     <p>
                                     Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
                                     a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
                                     asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                                    </p>
+                                </div>
+                            </div> -->
+
+                            <div class="row">
+                                <div class="column">
+                                    <p>
+                                        If you’re ever stuck with a bunch of confident, happy, and charming people, making memories at every step—well, congrats, you’ve just bumped into the GetDressed people!
                                     </p>
                                 </div>
                             </div>
