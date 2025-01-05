@@ -23,7 +23,7 @@
     <!-- script
     ================================================== -->
     <script src='{% static "js/modernizr.js" %}'></script>
-<script defer src='{% static "js/fontawesome/all.min.js" %}'></script>
+    <script defer src='{% static "js/fontawesome/all.min.js" %}'></script>
 
     <!-- favicons
     ================================================== -->
@@ -32,6 +32,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> -->
     <link rel="manifest" href="site.webmanifest">
 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.getElementById("mc-form");
+            form.addEventListener("submit", async (event) => {
+                event.preventDefault();
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                });
+                const data = await response.json();
+                document.querySelector(".subscribe-message").textContent = data.message;
+            });
+        });
+    </script>
 </head>
 
 <body id="top">
@@ -154,8 +170,15 @@
                 get exclusive offer on our grand opening.
                 </p>
 
-                <form id="mc-form" class="group mc-form" novalidate="true">
+                <!-- <form id="mc-form" class="group mc-form" novalidate="true">
                     <input type="email" value="" name="EMAIL" class="email h-full-width h-text-center h-add-half-bottom" id="mc-email" placeholder="Email Address" required="">
+                    <input type="submit" name="subscribe" value="Subscribe" class="btn--small h-full-width">
+                    <label for="mc-email" class="subscribe-message"></label>
+                </form> -->
+
+                <form id="mc-form" class="group mc-form" novalidate="true" action="{% url 'subscribe' %}" method="post">
+                    {% csrf_token %}
+                    <input type="email" name="EMAIL" class="email h-full-width h-text-center h-add-half-bottom" id="mc-email" placeholder="Email Address" required>
                     <input type="submit" name="subscribe" value="Subscribe" class="btn--small h-full-width">
                     <label for="mc-email" class="subscribe-message"></label>
                 </form>

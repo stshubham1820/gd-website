@@ -2067,6 +2067,7 @@ input::-moz-focus-inner {
 .modal form input[type="email"] {
   height: 5.6rem;
   padding: 1.2rem 24px 1.2rem;
+  color: #000000;
 }
 
 .modal form label {
